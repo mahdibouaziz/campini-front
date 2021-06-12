@@ -1,0 +1,59 @@
+/* PC */
+.header-container{
+    width: 100%;
+}
+
+.carr-div{
+}
+
+.carr-div>img{
+    width:100%;
+    height:90vh;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.carousel-caption{
+    bottom: 16.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.carousel-caption> h3{
+    text-transform: uppercase;
+    font-weight: bolder;
+    position: relative;
+    font-size: 50px;
+    line-height: normal;
+}
+
+.carousel-caption>p{
+    text-transform: capitalize; 
+    font-size: 30px;   
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+    .carousel-caption{
+        bottom: 15.25rem; 
+    }
+    .carousel-caption>h3{
+        font-size: 35px;
+    }
+    .carousel-caption>p{ 
+        font-size: 20px;   
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .carousel-caption{
+        bottom: 14.25rem; 
+    }
+    .carousel-caption>h3{
+        font-size: 30px;
+    }
+    .carousel-caption>p{ 
+        font-size: 18px;   
+    }
+  }
