@@ -9,8 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
