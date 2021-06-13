@@ -40,11 +40,16 @@
 
 .register-button {
   margin-top: 1rem;
+  background-color: #6c8655;
 }
 
 .terms-services {
   color: #858585;
   font-size: 0.85rem;
+}
+
+.mat-form-field-appearance .mat-form-field {
+  color: rgb(194, 1, 1);
 }
 
 /* Responsive for mobile */
