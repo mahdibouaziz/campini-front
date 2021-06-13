@@ -10,3 +10,16 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+/* The color of the background - navbar */
+.navbar-bg {
+  background-color: #1e2227;
+}
+
+/* Color of the navbar items */
+.links-nav-container > a,
+.links-nav-container a span,
+.links-nav-container a mat-icon,
+.toggle-button button mat-icon {
+  color: #f2f2f2;
+}
