@@ -1,44 +1,11 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav role="navigation">
-    <mat-nav-list>
-      <a mat-list-item>
-        <mat-icon>home</mat-icon>
-        <span class="nav-caption">Home</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>upcoming</mat-icon>
-        <span class="nav-caption">Events</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>shopping_bag</mat-icon>
-        <span class="nav-caption">Store</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>login</mat-icon>
-        <span class="nav-caption">Login</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>person</mat-icon>
-        <span class="nav-caption">Register</span>
-      </a>
-    </mat-nav-list>
+    <app-sidenav></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
-      <div class="toggle-button">
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div class="logo">Campini</div>
-      <div class="links-for-pc">
-        <a mat-button>Home</a>
-        <a mat-button>Events</a>
-        <a mat-button>Store</a>
-        <a mat-button>Login</a>
-        <a mat-button>Register</a>
-      </div>
-    </mat-toolbar>
-    <app-header></app-header>
+    <app-toolbar (sidenavToggle)="sidenav.toggle()"></app-toolbar>
+    <main>
+      <app-header></app-header>
+    </main>
   </mat-sidenav-content>
 </mat-sidenav-container>

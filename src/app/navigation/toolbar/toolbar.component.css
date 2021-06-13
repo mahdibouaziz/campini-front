@@ -1,0 +1,24 @@
+a:hover,
+a:active {
+  color: green;
+}
+.logo {
+}
+
+.toggle-button {
+  display: none;
+}
+
+.links-for-pc {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .links-for-pc {
+    display: none;
+  }
+}
