@@ -1,7 +1,12 @@
-a:hover,
-a:active {
-  color: green;
+mat-toolbar {
+  display: flex;
+  padding: 0 3rem;
 }
+
+.spacer {
+  flex-grow: 1;
+}
+
 .logo {
 }
 
@@ -11,6 +16,17 @@ a:active {
 
 .links-for-pc {
   display: flex;
+}
+
+.links-for-pc > a:hover {
+  background-color: #4c6b52;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 1100px) {
+  mat-toolbar {
+    padding: 0 1rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
