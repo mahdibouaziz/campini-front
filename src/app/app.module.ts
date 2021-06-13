@@ -8,10 +8,11 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './navbar/navbar/navbar.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,],
+  declarations: [AppComponent, HeaderComponent, NavbarComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
