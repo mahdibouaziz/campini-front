@@ -1,1 +1,41 @@
-<p>login works!</p>
+<main class="main">
+  <img src="../../../assets/img/secondslide.jpg" class="login-image" alt="" />
+  <div class="login">
+    <h1 class="title">LOGIN</h1>
+
+    <form #loginForm="ngForm" class="credentials">
+      <mat-form-field class="input">
+        <mat-label>Username</mat-label>
+        <input
+          [(ngModel)]="username"
+          name="username"
+          type="text"
+          required
+          matInput
+          placeholder="Username"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Password</mat-label>
+        <input
+          [(ngModel)]="password"
+          name="password"
+          required
+          type="password"
+          matInput
+        />
+      </mat-form-field>
+
+      <button
+        class="login-button"
+        mat-raised-button
+        color="primary"
+        (click)="login()"
+        [disabled]="loginForm.form.invalid"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</main>
