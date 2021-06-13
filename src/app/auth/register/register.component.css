@@ -48,8 +48,14 @@
   font-size: 0.85rem;
 }
 
-.mat-form-field-appearance .mat-form-field {
-  color: rgb(194, 1, 1);
+.login-link {
+  margin-top: 2rem;
+}
+
+.login-link > a {
+  background-color: #6c8655;
+  margin-left: 0.4rem;
+  margin-right: 0.1rem;
 }
 
 /* Responsive for mobile */
