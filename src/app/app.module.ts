@@ -8,10 +8,12 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,],
+  declarations: [AppComponent, HeaderComponent, LoginComponent, RegisterComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
