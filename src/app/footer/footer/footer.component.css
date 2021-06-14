@@ -1,0 +1,8 @@
+.dashboard-items p a {
+  font-size: 17px;
+}
+
+.dashboard-items p a:hover {
+  background-color: #4c6b52;
+  transition: all 0.3s ease-in-out;
+}

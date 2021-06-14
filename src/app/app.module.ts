@@ -10,10 +10,11 @@ import { HeaderComponent } from './header/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
+import { FooterComponent } from './footer/footer/footer.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SidenavComponent, ToolbarComponent,],
+  declarations: [AppComponent, HeaderComponent, SidenavComponent, ToolbarComponent, FooterComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
