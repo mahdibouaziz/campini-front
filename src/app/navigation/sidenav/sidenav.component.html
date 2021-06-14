@@ -1,6 +1,6 @@
 <mat-nav-list class="links-nav-container">
-  <a mat-list-item (click)="onClose()">
-    <mat-icon>home</mat-icon>
+  <a routerLink="/" mat-list-item (click)="onClose()">
+    <mat-icon>Home</mat-icon>
     <span class="nav-caption">Home</span>
   </a>
   <div class="spacer"><hr /></div>
@@ -14,12 +14,12 @@
     <span class="nav-caption">Store</span>
   </a>
   <div class="spacer"><hr /></div>
-  <a mat-list-item (click)="onClose()">
+  <a routerLink="/login" mat-list-item (click)="onClose()">
     <mat-icon>login</mat-icon>
     <span class="nav-caption">Login</span>
   </a>
   <div class="spacer"><hr /></div>
-  <a mat-list-item (click)="onClose()">
+  <a routerLink="/register" mat-list-item (click)="onClose()">
     <mat-icon>person</mat-icon>
     <span class="nav-caption">Register</span>
   </a>
