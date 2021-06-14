@@ -14,6 +14,9 @@ export class RegisterComponent implements OnInit {
   email: string;
   password: string;
   dateOfBirthday: Date;
+  // Error variables
+  errorsFromDb: any = null;
+  usernameError: any = null;
 
   constructor(private authService: AuthService) {}
 
@@ -45,7 +48,14 @@ export class RegisterComponent implements OnInit {
           console.log(result);
         },
         (error) => {
-          console.log(error.error.message);
+          const message = error.error.message;
+          if (Array.isArray(message)) {
+            this.errorsFromDb = message;
+            this.usernameError = null;
+          } else {
+            this.usernameError = message;
+            this.errorsFromDb = null;
+          }
         },
         () => {
           console.log('register completed');

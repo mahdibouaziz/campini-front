@@ -80,6 +80,15 @@
         />
       </mat-form-field>
 
+      <!-- Error messages -->
+      <div class="error-message" *ngIf="errorsFromDb">
+        <p *ngFor="let error of errorsFromDb">{{ error }}</p>
+      </div>
+
+      <div class="error-message" *ngIf="usernameError">
+        <p>{{ usernameError }}</p>
+      </div>
+
       <button
         class="register-button"
         mat-raised-button
