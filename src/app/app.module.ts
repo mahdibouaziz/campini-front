@@ -15,6 +15,9 @@ import { RegisterComponent } from './auth/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile/profile.component';
+import { ProfileinfoComponent } from './profile/profileinfo/profileinfo.component';
+import { UpcomingeventsComponent } from './profile/upcomingevents/upcomingevents.component';
+import { PasteventsComponent } from './profile/pastevents/pastevents.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { ProfileComponent } from './profile/profile/profile.component';
     FooterComponent,
     HomeComponent,
     ProfileComponent,
+    ProfileinfoComponent,
+    UpcomingeventsComponent,
+    PasteventsComponent,
   ],
   imports: [
     BrowserModule,
