@@ -14,17 +14,22 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import { EventComponent } from './upcoming-events/event/event.component';
+import { EventsService } from 'src/app/services/events.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent,
-    RegisterComponent,
     SidenavComponent,
-    ToolbarComponent,
+    LoginComponent,
     FooterComponent,
     HomeComponent,
+    RegisterComponent,
+    ToolbarComponent,
+    UpcomingEventsComponent,
+    EventComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,10 +37,11 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    HttpClientModule,
     NgbModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
