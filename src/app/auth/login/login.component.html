@@ -27,6 +27,10 @@
         />
       </mat-form-field>
 
+      <div class="error-message" *ngIf="error">
+        <p>{{ error }}</p>
+      </div>
+
       <button
         class="login-button"
         mat-raised-button

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/modal/user';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -23,16 +22,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   register(): void {
-    // verify the data here
-    console.log(
-      this.firstName,
-      this.lastName,
-      this.username,
-      this.email,
-      this.password,
-      this.dateOfBirthday
-    );
-
     // register the user to the database if the data is correct
     this.authService
       .register(
@@ -46,6 +35,8 @@ export class RegisterComponent implements OnInit {
       .subscribe(
         (result) => {
           console.log(result);
+          this.usernameError = null;
+          this.errorsFromDb = null;
         },
         (error) => {
           const message = error.error.message;

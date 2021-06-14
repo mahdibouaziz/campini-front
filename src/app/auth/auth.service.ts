@@ -27,4 +27,8 @@ export class AuthService {
       dateOfBirthday,
     });
   }
+
+  login(username: string, password: string): Observable<any> {
+    return this.http.post(`${url}/signin`, { username, password });
+  }
 }

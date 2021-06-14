@@ -57,6 +57,11 @@
   margin-left: 0.4rem;
   margin-right: 0.1rem;
 }
+
+.error-message p {
+  color: rgb(243, 67, 67);
+}
+
 /* Responsive for mobile */
 
 @media only screen and (max-width: 768px) {
