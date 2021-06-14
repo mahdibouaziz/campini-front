@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventComponent } from './upcoming-events/event/event.component';
 import { EventsService } from 'src/app/upcoming-events/events.service';
+import { DialogElementsExampleDialog } from './upcoming-events/event/event.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { EventsService } from 'src/app/upcoming-events/events.service';
     ToolbarComponent,
     UpcomingEventsComponent,
     EventComponent,
+    DialogElementsExampleDialog
   ],
   imports: [
     BrowserModule,
