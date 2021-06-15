@@ -18,6 +18,7 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
 import { EventComponent } from './upcoming-events/event/event.component';
 import { EventsService } from 'src/app/upcoming-events/events.service';
 import { PastEventsComponent } from './past-events/past-events.component';
+import { PastEventComponent } from './past-events/pastevent/pastevent.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PastEventsComponent } from './past-events/past-events.component';
     UpcomingEventsComponent,
     EventComponent,
     PastEventsComponent,
+    PastEventComponent
   ],
   imports: [
     BrowserModule,
