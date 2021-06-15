@@ -18,6 +18,7 @@ import { ProfileComponent } from './profile/profile/profile.component';
 import { ProfileinfoComponent } from './profile/profileinfo/profileinfo.component';
 import { UpcomingeventsComponent } from './profile/upcomingevents/upcomingevents.component';
 import { PasteventsComponent } from './profile/pastevents/pastevents.component';
+import { LayoutComponent } from './profile/upcomingevents/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PasteventsComponent } from './profile/pastevents/pastevents.component';
     ProfileinfoComponent,
     UpcomingeventsComponent,
     PasteventsComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,

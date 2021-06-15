@@ -1,0 +1,13 @@
+p {
+  text-align: center;
+  font-family: "Dancing Script", cursive !important;
+  font-size: 50px;
+  margin-bottom: 1.5rem;
+  color: #9c9c9ca2;
+}
+
+.container-upcoming {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
