@@ -27,6 +27,7 @@ import { PasteventsComponent } from './profile/pastevents/pastevents.component';
 import { LayoutComponent } from './profile/upcomingevents/layout/layout.component';
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { CreateEventComponent } from './profile/create-event/create-event.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { CreateEventComponent } from './profile/create-event/create-event.compon
     LayoutComponent,
     EditProfileComponent,
     CreateEventComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

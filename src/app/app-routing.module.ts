@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { LoginGuard } from './guards/login.guard';
 import { LogoutGuard } from './guards/logout.guard';
 import { HomeComponent } from './home/home.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   },
   { path: 'events', component: ProfileComponent },
   { path: '', component: HomeComponent },
+  { path: '**', component: ErrorPageComponent },
 ];
 
 @NgModule({
