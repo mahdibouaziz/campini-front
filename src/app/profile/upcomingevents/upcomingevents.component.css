@@ -11,3 +11,16 @@ p {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  margin-bottom: 2rem;
+  background-color: rgb(255, 207, 149);
+  color: black;
+  width: 300px;
+}
