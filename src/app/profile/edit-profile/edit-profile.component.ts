@@ -15,10 +15,7 @@ export class EditProfileComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(
-    private http: HttpClient,
-    private profileService: ProfileService
-  ) {}
+  constructor(private profileService: ProfileService) {}
 
   ngOnInit(): void {
     this.getUserInformation();

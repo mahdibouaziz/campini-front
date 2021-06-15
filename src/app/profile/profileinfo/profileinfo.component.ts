@@ -33,4 +33,9 @@ export class ProfileinfoComponent implements OnInit {
     const link = ['editProfile'];
     this.router.navigate(link);
   }
+
+  createEvent(): void {
+    const link = ['createEvent'];
+    this.router.navigate(link);
+  }
 }

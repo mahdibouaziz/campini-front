@@ -5,6 +5,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginGuard } from './guards/login.guard';
 import { LogoutGuard } from './guards/logout.guard';
 import { HomeComponent } from './home/home.component';
+import { CreateEventComponent } from './profile/create-event/create-event.component';
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'editProfile',
     component: EditProfileComponent,
+    canActivate: [LoginGuard],
+  },
+  {
+    path: 'createEvent',
+    component: CreateEventComponent,
     canActivate: [LoginGuard],
   },
   { path: 'events', component: ProfileComponent },
