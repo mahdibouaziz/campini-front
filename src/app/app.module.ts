@@ -12,11 +12,12 @@ import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer/footer.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventComponent } from './upcoming-events/event/event.component';
 import { EventsService } from 'src/app/upcoming-events/events.service';
+import { TokenInterceptor } from './interceptors/login.interceptor';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,14 @@ import { EventsService } from 'src/app/upcoming-events/events.service';
     NgbModule,
     HttpClientModule,
   ],
-  providers: [EventsService],
+  providers: [
+    EventsService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

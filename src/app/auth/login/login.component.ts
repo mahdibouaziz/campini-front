@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
       (result) => {
         // console.log(result);
         this.error = null;
-        const token = result.accessToken;
-        localStorage.setItem('token', token);
+        const accessToken = result.accessToken;
+        localStorage.setItem('accessToken', accessToken);
         const link = ['/'];
         // navigate to the home page
         this.router.navigate(link);

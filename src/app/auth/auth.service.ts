@@ -34,7 +34,7 @@ export class AuthService {
   }
 
   logout(): void {
-    localStorage.removeItem('token');
+    localStorage.removeItem('accessToken');
     const link = ['login'];
     this.router.navigate(link);
   }
