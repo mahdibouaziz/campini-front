@@ -13,7 +13,7 @@ image:string;
 name:string;
 date: string;
 description: string;
-clicked=false;
+
 
 @Input() set event(value:any) {
   if (value) {

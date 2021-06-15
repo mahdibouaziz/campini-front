@@ -8,6 +8,7 @@ import { EventsService } from 'src/app/upcoming-events/events.service';
 export class PastEventsComponent implements OnInit{
   events: any;
   all_events: any;
+  clicked=false;
   constructor(private eventsService: EventsService) {}
 
   ngOnInit(): void {
@@ -30,5 +31,8 @@ export class PastEventsComponent implements OnInit{
     var dateA: any = new Date(a.date);
     var dateB: any = new Date(b.date);
     return dateA - dateB;
+  }
+  showMore(clicked:boolean){
+    this.clicked=true;
   }
 }
