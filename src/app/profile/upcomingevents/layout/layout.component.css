@@ -13,9 +13,14 @@
   margin-top: 1.4rem;
   font-family: "Roboto", sans-serif;
 }
+
+.image-text h1 {
+  font-weight: bold;
+}
+
 .image-text h1:hover {
   color: #2b5f57;
-  font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 .date {
   font-size: 15px;
