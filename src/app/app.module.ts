@@ -21,6 +21,10 @@ import { TokenInterceptor } from './interceptors/login.interceptor';
 import { LoginGuard } from './guards/login.guard';
 import { LogoutGuard } from './guards/logout.guard';
 import { ProfileComponent } from './profile/profile/profile.component';
+import { ProfileinfoComponent } from './profile/profileinfo/profileinfo.component';
+import { UpcomingeventsComponent } from './profile/upcomingevents/upcomingevents.component';
+import { PasteventsComponent } from './profile/pastevents/pastevents.component';
+import { LayoutComponent } from './profile/upcomingevents/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { ProfileComponent } from './profile/profile/profile.component';
     UpcomingEventsComponent,
     EventComponent,
     ProfileComponent,
+    ProfileinfoComponent,
+    UpcomingeventsComponent,
+    PasteventsComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
