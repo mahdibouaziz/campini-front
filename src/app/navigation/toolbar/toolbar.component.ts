@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 export class ToolbarComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter();
 
-  constructor(private authService: AuthService) {}
+  constructor(public authService: AuthService) {}
 
   ngOnInit(): void {}
   onTogglesidenav() {

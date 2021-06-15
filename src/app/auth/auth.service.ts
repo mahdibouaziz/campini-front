@@ -38,4 +38,8 @@ export class AuthService {
     const link = ['login'];
     this.router.navigate(link);
   }
+
+  isLogged(): boolean {
+    return !!localStorage.getItem('accessToken');
+  }
 }

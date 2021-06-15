@@ -18,6 +18,8 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
 import { EventComponent } from './upcoming-events/event/event.component';
 import { EventsService } from 'src/app/upcoming-events/events.service';
 import { TokenInterceptor } from './interceptors/login.interceptor';
+import { LoginGuard } from './guards/login.guard';
+import { LogoutGuard } from './guards/logout.guard';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { TokenInterceptor } from './interceptors/login.interceptor';
       useClass: TokenInterceptor,
       multi: true,
     },
+    LoginGuard,
+    LogoutGuard,
   ],
   bootstrap: [AppComponent],
 })

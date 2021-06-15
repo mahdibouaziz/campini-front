@@ -9,9 +9,13 @@
   <div class="links-for-pc links-nav-container">
     <a routerLink="/" mat-button>Home</a>
     <a routerLink="/events" mat-button>Events</a>
-    <a mat-button>Store</a>
-    <a routerLink="/login" mat-button>Login</a>
-    <a routerLink="/register" mat-button>Register</a>
-    <a (click)="logout()" mat-button>Logout</a>
+    <a *ngIf="!authService.isLogged()" routerLink="/login" mat-button>Login</a>
+    <a *ngIf="!authService.isLogged()" routerLink="/register" mat-button
+      >Register</a
+    >
+    <a *ngIf="authService.isLogged()" routerLink="/profile" mat-button
+      >Profile</a
+    >
+    <a *ngIf="authService.isLogged()" (click)="logout()" mat-button>Logout</a>
   </div>
 </mat-toolbar>

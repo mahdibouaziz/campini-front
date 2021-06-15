@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class SidenavComponent implements OnInit {
   @Output() closeSidenav = new EventEmitter();
-  constructor(private authService: AuthService) {}
+  constructor(public authService: AuthService) {}
 
   ngOnInit(): void {}
   onClose() {
