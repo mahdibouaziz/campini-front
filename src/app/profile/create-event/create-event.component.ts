@@ -22,6 +22,7 @@ export class CreateEventComponent implements OnInit {
   ngOnInit(): void {}
 
   createEvent(): void {
+    const nb = Math.floor(Math.random() * 7) + 1;
     const event = new EventCamping(
       this.name,
       this.description,
@@ -30,7 +31,7 @@ export class CreateEventComponent implements OnInit {
       this.numnberOfDays,
       this.numberMaxOfParticipants,
       this.price,
-      '4.jpg'
+      `${nb}.jpg`
     );
     console.log(event);
     this.profileService.createEvent(event);
