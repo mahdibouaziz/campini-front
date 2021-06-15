@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 const url = 'http://localhost:3000/auth';
@@ -8,7 +9,7 @@ const url = 'http://localhost:3000/auth';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient, private router: Router) {}
 
   register(
     username: string,
@@ -30,5 +31,11 @@ export class AuthService {
 
   login(username: string, password: string): Observable<any> {
     return this.http.post(`${url}/signin`, { username, password });
+  }
+
+  logout(): void {
+    localStorage.removeItem('token');
+    const link = ['login'];
+    this.router.navigate(link);
   }
 }
