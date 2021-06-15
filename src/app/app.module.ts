@@ -20,6 +20,7 @@ import { EventsService } from 'src/app/upcoming-events/events.service';
 import { TokenInterceptor } from './interceptors/login.interceptor';
 import { LoginGuard } from './guards/login.guard';
 import { LogoutGuard } from './guards/logout.guard';
+import { ProfileComponent } from './profile/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LogoutGuard } from './guards/logout.guard';
     ToolbarComponent,
     UpcomingEventsComponent,
     EventComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
