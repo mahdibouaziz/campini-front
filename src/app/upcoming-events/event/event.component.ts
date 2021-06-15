@@ -3,25 +3,23 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
+  styleUrls: ['./event.component.css'],
 })
 export class EventComponent implements OnInit {
-place: string;
-image:string;
-name:string;
-date: string;
+  place: string;
+  image: string;
+  name: string;
+  date: string;
 
-@Input() set event(value:any) {
-  if (value) {
-    this.place = value.place;
-    this.image = value.image;
-    this.name = value.name;
-    this.date = value.date;
+  @Input() set event(value: any) {
+    if (value) {
+      this.place = value.place;
+      this.image = '../../../../assets/img/' + value.image;
+      this.name = value.name;
+      this.date = value.date;
+    }
   }
-};
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
