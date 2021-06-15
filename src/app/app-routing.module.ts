@@ -5,6 +5,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginGuard } from './guards/login.guard';
 import { LogoutGuard } from './guards/logout.guard';
 import { HomeComponent } from './home/home.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 
 const routes: Routes = [
@@ -15,6 +16,11 @@ const routes: Routes = [
     canActivate: [LogoutGuard],
   },
   { path: 'profile', component: ProfileComponent, canActivate: [LoginGuard] },
+  {
+    path: 'editProfile',
+    component: EditProfileComponent,
+    canActivate: [LoginGuard],
+  },
   { path: 'events', component: ProfileComponent },
   { path: '', component: HomeComponent },
 ];
