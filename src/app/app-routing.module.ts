@@ -15,6 +15,7 @@ const routes: Routes = [
     canActivate: [LogoutGuard],
   },
   { path: 'profile', component: ProfileComponent, canActivate: [LoginGuard] },
+  { path: 'events', component: ProfileComponent },
   { path: '', component: HomeComponent },
 ];
 
