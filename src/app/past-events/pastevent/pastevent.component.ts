@@ -16,7 +16,7 @@ export class PastEventComponent implements OnInit {
   @Input() set event(value: any) {
     if (value) {
       this.place = value.place;
-      this.image = '../../../assets/img/' + value.image;
+      this.image = '../../../assets/img/uploads/' + value.image;
       this.name = value.name;
       this.date = value.date;
       this.description = value.description;
