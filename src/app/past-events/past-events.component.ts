@@ -9,14 +9,16 @@ export class PastEventsComponent implements OnInit{
   events: any;
   all_events: any;
   clicked=false;
+  added: number= 6;
   constructor(private eventsService: EventsService) {}
 
   ngOnInit(): void {
     this.loadList();
   }
 
-  private sliced() {
-    this.events = this.all_events.slice(0, 6);
+  public sliced() {
+    this.events = this.all_events.slice(0, this.added );
+    this.added= this.added +6;
   }
 
   private loadList() {
