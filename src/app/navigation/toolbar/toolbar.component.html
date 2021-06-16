@@ -9,13 +9,17 @@
   <div class="links-for-pc links-nav-container">
     <a routerLink="/" mat-button>Home</a>
     <a routerLink="/events" mat-button>Events</a>
-    <a *ngIf="!authService.isLogged()" routerLink="/login" mat-button>Login</a>
+    <a *ngIf="!authService.isLogged()" routerLink="/login" mat-button
+      ><mat-icon>login</mat-icon>Login</a
+    >
     <a *ngIf="!authService.isLogged()" routerLink="/register" mat-button
-      >Register</a
+      ><mat-icon>app_registration</mat-icon>Register</a
     >
     <a *ngIf="authService.isLogged()" routerLink="/profile" mat-button
-      >Profile</a
+      ><mat-icon>account_circle</mat-icon>Profile</a
     >
-    <a *ngIf="authService.isLogged()" (click)="logout()" mat-button>Logout</a>
+    <a *ngIf="authService.isLogged()" (click)="logout()" mat-button
+      ><mat-icon>logout</mat-icon>Logout</a
+    >
   </div>
 </mat-toolbar>
