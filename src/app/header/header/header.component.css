@@ -1,55 +1,67 @@
-/* PC */
-.header-container {
+.showcase {
+  right: 0;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
 }
-
-.carr-div > img {
-  width: 100%;
-  height: 90vh;
+.showcase video {
   object-fit: cover;
-  filter: brightness(60%);
+  position: absolute;
+  z-index: -1;
+  filter: brightness(40%);
+  width: 100%;
+  height: 94vh;
+  opacity: 0.9;
 }
-
-.carousel-caption {
-  bottom: 16.25rem;
-  font-family: Arial, Helvetica, sans-serif;
+.overlay {
+  position: absolute;
+  z-index: -1;
+  filter: brightness(40%);
+  width: 100%;
+  height: 94vh;
+  mix-blend-mode: overlay;
 }
-
-.carousel-caption > h3 {
-  text-transform: uppercase;
-  font-weight: bolder;
+.text {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
   position: relative;
-  font-size: 50px;
-  line-height: normal;
+  bottom: 3rem;
+  color: #fff;
+}
+.text h2 {
+  letter-spacing: 3px;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3 {
+  letter-spacing: 3px;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.25em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 500px;
 }
 
-.carousel-caption > p {
-  text-transform: capitalize;
-  font-size: 30px;
-}
-
-/* Mobile */
-
-@media only screen and (max-width: 768px) {
-  .carousel-caption {
-    bottom: 15.25rem;
+@media only screen and (max-width: 800px) {
+  .text h2 {
+    letter-spacing: 1px;
+    font-size: 4rem;
   }
-  .carousel-caption > h3 {
-    font-size: 35px;
+  .text h3 {
+    letter-spacing: 1px;
+    font-size: 3rem;
   }
-  .carousel-caption > p {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .carousel-caption {
-    bottom: 14.25rem;
-  }
-  .carousel-caption > h3 {
-    font-size: 30px;
-  }
-  .carousel-caption > p {
-    font-size: 18px;
+  .text p {
+    font-size: 1.2em;
   }
 }
