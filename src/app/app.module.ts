@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
@@ -20,7 +20,7 @@ import { EventsService } from 'src/app/upcoming-events/events.service';
 import { DialogElementsExampleDialog } from './upcoming-events/event/event.component';
 import { EventsComponent } from './upcoming-events/events/events.component';
 import { PageComponent } from './upcoming-events/events/page/page.component';
-
+import { FilterComponent } from './upcoming-events/events/filter/filter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +35,8 @@ import { PageComponent } from './upcoming-events/events/page/page.component';
     EventComponent,
     DialogElementsExampleDialog,
     EventsComponent,
-    PageComponent
+    PageComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +44,9 @@ import { PageComponent } from './upcoming-events/events/page/page.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule,
+    ReactiveFormsModule,
     NgbModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [EventsService],
   bootstrap: [AppComponent],

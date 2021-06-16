@@ -53,4 +53,12 @@ export class EventsComponent implements OnInit {
     var dateB: any = new Date(b.date);
     return dateA - dateB;
   }
-}
+
+  filterDisplayed(object: any){
+    this.displayed_events = this.displayed_events.filter((event: any)=> {
+      /*(event.numberOfDays == object.nb_days) &&
+        (object.location.indexOf(event.place) != 0) && */
+        (new Date(event.start_date)>= new Date(object.start_date)
+        && ((new Date(event.start_date)<= new Date(object.start_date))))})
+    }
+  }
