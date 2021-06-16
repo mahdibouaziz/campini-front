@@ -22,7 +22,7 @@ export class CreateEventComponent implements OnInit {
   ngOnInit(): void {}
 
   createEvent(): void {
-    const nb = Math.floor(Math.random() * 7) + 1;
+    const nb = Math.floor(Math.random() * 31) + 1;
     const event = new EventCamping(
       this.name,
       this.description,
