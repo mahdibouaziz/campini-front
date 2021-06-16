@@ -18,6 +18,8 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
 import { EventComponent } from './upcoming-events/event/event.component';
 import { EventsService } from 'src/app/upcoming-events/events.service';
 import { DialogElementsExampleDialog } from './upcoming-events/event/event.component';
+import { EventsComponent } from './upcoming-events/events/events.component';
+import { PageComponent } from './upcoming-events/events/page/page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { DialogElementsExampleDialog } from './upcoming-events/event/event.compo
     ToolbarComponent,
     UpcomingEventsComponent,
     EventComponent,
-    DialogElementsExampleDialog
+    DialogElementsExampleDialog,
+    EventsComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
