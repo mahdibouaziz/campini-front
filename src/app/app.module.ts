@@ -28,6 +28,11 @@ import { LayoutComponent } from './profile/upcomingevents/layout/layout.componen
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { CreateEventComponent } from './profile/create-event/create-event.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { PastEventsComponent } from './past-events/past-events.component';
+import {
+  PastEventComponent,
+  DialogElementsExampleDialog,
+} from './past-events/pastevent/pastevent.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +54,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     EditProfileComponent,
     CreateEventComponent,
     ErrorPageComponent,
+    PastEventsComponent,
+    PastEventComponent,
+    DialogElementsExampleDialog,
   ],
   imports: [
     BrowserModule,
