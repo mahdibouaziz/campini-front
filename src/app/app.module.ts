@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
@@ -37,6 +37,9 @@ import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { WhoAreWeComponent } from './about-us/who-are-we/who-are-we.component';
 import { OurMissionComponent } from './about-us/our-mission/our-mission.component';
 
+import { EventsComponent } from './upcoming-events/events/events.component';
+import { PageComponent } from './upcoming-events/events/page/page.component';
+import { FilterComponent } from './upcoming-events/events/filter/filter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +66,10 @@ import { OurMissionComponent } from './about-us/our-mission/our-mission.componen
     AboutUsComponent,
     WhoAreWeComponent,
     OurMissionComponent,
+
+    EventsComponent,
+    PageComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +77,7 @@ import { OurMissionComponent } from './about-us/our-mission/our-mission.componen
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
   ],

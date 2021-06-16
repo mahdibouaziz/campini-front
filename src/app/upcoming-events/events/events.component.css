@@ -1,0 +1,14 @@
+
+    .pos{
+        justify-content: center;
+    }
+
+    a{
+        background-color:rgb(54, 53, 53);  
+        color: white;
+    }
+
+    a:hover{
+        background-color: #4c6b52;
+        color:white;
+    }
