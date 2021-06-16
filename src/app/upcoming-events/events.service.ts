@@ -9,7 +9,7 @@ export class EventsService {
   constructor(private http: HttpClient) {}
 
   all(): Observable<any> {
-    return this.http.get(BASE_URL + 'all');
+    return this.http.get(BASE_URL + 'upComingEvents');
   }
 
   pastEvents(): Observable<any> {
