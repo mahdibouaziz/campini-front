@@ -3,13 +3,13 @@ import { EventsService } from 'src/app/upcoming-events/events.service';
 @Component({
   selector: 'app-past-events',
   templateUrl: './past-events.component.html',
-  styleUrls: ['./past-events.component.css']
+  styleUrls: ['./past-events.component.css'],
 })
-export class PastEventsComponent implements OnInit{
+export class PastEventsComponent implements OnInit {
   events: any;
   all_events: any;
-  clicked=false;
-  added: number= 6;
+  clicked = false;
+  added: number = 6;
   constructor(private eventsService: EventsService) {}
 
   ngOnInit(): void {
@@ -17,12 +17,12 @@ export class PastEventsComponent implements OnInit{
   }
 
   public sliced() {
-    this.events = this.all_events.slice(0, this.added );
-    this.added= this.added +6;
+    this.events = this.all_events.slice(0, this.added);
+    this.added = this.added + 6;
   }
 
   private loadList() {
-    this.eventsService.all().subscribe((list) => {
+    this.eventsService.pastEvents().subscribe((list) => {
       this.all_events = list;
       this.all_events.sort(this.diffdate);
       this.sliced();
@@ -34,7 +34,7 @@ export class PastEventsComponent implements OnInit{
     var dateB: any = new Date(b.date);
     return dateA - dateB;
   }
-  showMore(clicked:boolean){
-    this.clicked=true;
+  showMore(clicked: boolean) {
+    this.clicked = true;
   }
 }

@@ -1,9 +1,8 @@
-<div type="button" class="card" >
+<div type="button" class="card">
   <img class="card-img-top image" src="{{ image }}" alt="Card image cap" />
   <div class="bottom-left top">{{ name }}</div>
-  <div class="bottom-left bottom">{{ place }}</div>
+  <div class="bottom-left bottom">{{ place }} {{ date | date }}</div>
   <div class="middle">
     <p class="text">Learn More</p>
+  </div>
 </div>
-</div>
-

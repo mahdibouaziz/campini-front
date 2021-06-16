@@ -23,7 +23,7 @@ export class PastEventComponent implements OnInit {
     }
   }
   constructor(public dialog: MatDialog) {}
-  openDialog() {
+  openDialog(): void {
     this.dialog.open(DialogElementsExampleDialog);
   }
   ngOnInit(): void {}

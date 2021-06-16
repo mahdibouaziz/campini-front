@@ -20,7 +20,7 @@ export class UpcomingEventsComponent implements OnInit {
   }
 
   private loadList() {
-    this.eventsService.all().subscribe((list) => {
+    this.eventsService.upComingEvents().subscribe((list) => {
       this.all_events = list;
       this.all_events.sort(this.diffdate);
       this.sliced();
