@@ -1,11 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css'],
 })
 export class EventComponent implements OnInit {
+  id: number;
   place: string;
   image: string;
   name: string;
@@ -16,6 +19,7 @@ export class EventComponent implements OnInit {
 
   @Input() set event(value: any) {
     if (value) {
+      this.id = value.id;
       this.place = value.place;
       this.image = '../../../../assets/img/uploads/' + value.image;
       this.name = value.name;
@@ -25,11 +29,20 @@ export class EventComponent implements OnInit {
       this.description = value.description;
     }
   }
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
   openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
+    if (this.authService.isLogged()) {
+      // send a request with an id
+      this.dialog.open(DialogElementsExampleDialog);
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 }
 
