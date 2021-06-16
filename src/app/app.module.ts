@@ -42,6 +42,7 @@ import { PageComponent } from './upcoming-events/events/page/page.component';
 import { FilterComponent } from './upcoming-events/events/filter/filter.component';
 import { JoinUsComponent } from './Join-us/join-us/join-us.component';
 import { MobileAppComponent } from './mobile-app/mobile-app/mobile-app.component';
+import { QuoteComponent } from './quote/quote.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +75,7 @@ import { MobileAppComponent } from './mobile-app/mobile-app/mobile-app.component
     FilterComponent,
     JoinUsComponent,
     MobileAppComponent,
+    QuoteComponent,
   ],
   imports: [
     BrowserModule,
