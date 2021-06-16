@@ -1,11 +1,13 @@
 .model-container {
-  height: 40vh;
   width: 500px;
   background-color: #f3f3f3;
+  height: 100%;
+  display: block;
 }
 .model-text {
   margin: 3rem;
   padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .model-text > h1 {
@@ -15,4 +17,11 @@
 .model-text > p {
   font-size: 16px;
   line-height: 1.75;
+}
+
+@media only screen and (max-width: 600px) {
+  .model-container {
+    width: 90%;
+    margin: auto;
+  }
 }
