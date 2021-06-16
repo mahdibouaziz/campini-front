@@ -40,6 +40,7 @@ import { OurMissionComponent } from './about-us/our-mission/our-mission.componen
 import { EventsComponent } from './upcoming-events/events/events.component';
 import { PageComponent } from './upcoming-events/events/page/page.component';
 import { FilterComponent } from './upcoming-events/events/filter/filter.component';
+import { JoinUsComponent } from './Join-us/join-us/join-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +71,7 @@ import { FilterComponent } from './upcoming-events/events/filter/filter.componen
     EventsComponent,
     PageComponent,
     FilterComponent,
+    JoinUsComponent,
   ],
   imports: [
     BrowserModule,
