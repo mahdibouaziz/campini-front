@@ -39,6 +39,7 @@ description: string;
 
 export class DialogElementsExampleDialog {
   description:string;
+  name:string;
   @Input() set event(value:any) {
     if (value) {
      
