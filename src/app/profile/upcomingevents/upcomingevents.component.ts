@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-upcomingevents',
@@ -6,7 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upcomingevents.component.css'],
 })
 export class UpcomingeventsComponent implements OnInit {
-  constructor() {}
+  upComingEvents: any;
 
-  ngOnInit(): void {}
+  constructor(private profileService: ProfileService) {}
+
+  ngOnInit(): void {
+    this.getUpComingEventsOfUser();
+  }
+
+  getUpComingEventsOfUser(): void {
+    this.profileService.getUpComingEventsOfUser().subscribe(
+      (result) => {
+        console.log(result);
+        this.upComingEvents = result;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 }

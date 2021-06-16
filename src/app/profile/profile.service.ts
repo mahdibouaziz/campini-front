@@ -38,4 +38,12 @@ export class ProfileService {
     );
     this.router.navigate(['']);
   }
+
+  getUpComingEventsOfUser(): Observable<any> {
+    return this.http.get(link + '/upComingEvent');
+  }
+
+  getLatestEventsOfUser(): Observable<any> {
+    return this.http.get(link + '/latestEvents');
+  }
 }
