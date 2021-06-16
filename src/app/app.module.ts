@@ -33,6 +33,9 @@ import {
   PastEventComponent,
   DialogElementsExampleDialog,
 } from './past-events/pastevent/pastevent.component';
+import { AboutUsComponent } from './about-us/about-us/about-us.component';
+import { WhoAreWeComponent } from './about-us/who-are-we/who-are-we.component';
+import { OurMissionComponent } from './about-us/our-mission/our-mission.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +60,9 @@ import {
     PastEventsComponent,
     PastEventComponent,
     DialogElementsExampleDialog,
+    AboutUsComponent,
+    WhoAreWeComponent,
+    OurMissionComponent,
   ],
   imports: [
     BrowserModule,
